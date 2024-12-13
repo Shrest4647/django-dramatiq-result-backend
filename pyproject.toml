@@ -39,3 +39,14 @@ dev = [
 "Bug Tracker" = "https://github.com/Shrest4647/django-dramatiq-result-backend/issues"
 
 
+# ==== pytest ====
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--ds=django_dramatiq_result_backend.settings --reuse-db --import-mode=importlib"
+python_files = [
+    "tests.py",
+    "test_*.py",
+]
+
+[tool.django-stubs]
+django_settings_module = "django_dramatiq_result_backend.settings"
