@@ -10,7 +10,6 @@ name = "django-dramatiq-result-backend"
 version = "0.1.1"
 description = "A Django-based result backend for Dramatiq."
 authors = [{ name = "Sunil", email = "shrest4647+pip@gmail.com" }]
-license = { file = "LICENSE" }
 readme = "README.md"
 keywords = ["django", "dramatiq", "result-backend", "async" ]
 classifiers = [
