@@ -1,15 +1,13 @@
 [build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
-]
+requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "django-dramatiq-result-backend"
-version = "0.1.1"
+version = "0.1.2"
 description = "A Django-based result backend for Dramatiq."
 authors = [{ name = "Sunil", email = "shrest4647+pip@gmail.com" }]
+license = {text = "MIT License"}
 readme = "README.md"
 keywords = ["django", "dramatiq", "result-backend", "async" ]
 classifiers = [
