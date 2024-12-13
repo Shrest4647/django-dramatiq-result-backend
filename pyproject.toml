@@ -27,6 +27,7 @@ dev = [
     "pytest-cov>=3.0",
     "pytest-django>=4.5",
 ]
+build = ["setuptools>=61.0"]
 
 [project.urls]
 "Homepage" = "https://github.com/Shrest4647/django-dramatiq-result-backend"
