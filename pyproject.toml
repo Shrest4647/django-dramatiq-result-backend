@@ -15,7 +15,6 @@ keywords = ["django", "dramatiq", "result-backend", "async" ]
 classifiers = [
     "Framework :: Django",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3"
 ]
 requires-python = ">=3.7"
@@ -49,6 +48,3 @@ python_files = [
 
 [tool.django-stubs]
 django_settings_module = "django_dramatiq_result_backend.settings"
-
-[tool.setuptools]
-license-files = ["LICENSE"]
