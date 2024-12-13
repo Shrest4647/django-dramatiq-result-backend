@@ -1,7 +1,6 @@
 from datetime import datetime, timedelta
 from dramatiq.results.backend import ResultBackend, Missing
 import typing
-from django_dramatiq_result_backend.models import Result
 
 
 class DjangoResultBackend(ResultBackend):
@@ -16,6 +15,7 @@ class DjangoResultBackend(ResultBackend):
         Returns:
             typing.Any: The result data if found, Missing otherwise.
         """
+        from .models import Result
 
         try:
             result = Result.objects.get(message_key=message_key)
@@ -38,6 +38,8 @@ class DjangoResultBackend(ResultBackend):
             result (typing.Any): The result data to store.
             ttl (int): The time-to-live (TTL) of the result.
         """
+        from .models import Result
+
         expiration_time = datetime.now() + timedelta(seconds=ttl)
 
         Result.objects.update_or_create(
