@@ -8,13 +8,12 @@ from .models import Result
 class ResultAdmin(admin.ModelAdmin):
     """Admin for the Result model."""
 
-    fields = (
-        "id",
+    list_display = (
+        "__str__",
         "message_key",
         "result_data",
         "created_at",
         "expiration_time",
-        "is_expired",
     )
-    list_display = ("id", "message_key", "created_at", "expiration_time", "is_expired")
+    readonly_fields = ("message_key", "created_at", "expiration_time")
     search_fields = ("message_key",)
